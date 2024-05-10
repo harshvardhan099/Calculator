@@ -13,10 +13,9 @@ class Calculator:
 
     @staticmethod
     def division(x: float, y: float) -> float:
-        if y==0:
+        if y == 0:
             raise ValueError("Cannot divide by error")
         return x // y
-
 
 # cal = Calculator()
 #
