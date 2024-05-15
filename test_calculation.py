@@ -1,30 +1,30 @@
 import unittest
 from unittest.mock import Mock
 
-from calculation import Calculator
+from calculation import add, subtract, multiplication, division
 
 
 class Test_Calculator(unittest.TestCase):
 
     def test_add(self):
-        result = Calculator.add(4, 6)
+        result = add(4, 6)
         self.assertEqual(result, 10)
 
     def test_subtract(self):
-        result = Calculator.subtract(-20, 8)
+        result = subtract(-20, 8)
         self.assertEqual(result, -28)
 
     def test_multiply(self):
-        result = Calculator.multiplication(-5, -6)
+        result = multiplication(-5, -6)
         self.assertEqual(result, 30)
 
     def test_division(self):
-        result = Calculator.division(25, 5)
+        result = division(25, 5)
         self.assertEqual(result, 5)
 
     def test_divide_by_zero(self):
         with self.assertRaises(ValueError):
-            Calculator.division(30, 0)
+            division(30, 0)
 
     def test_fetch_data(self):
         connect_to_db = Mock()
